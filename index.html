@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RicoTeknoloji | Dijital Tasarım</title>
+
+<style>
+html[data-theme="dark"]{--bg:#0b0f19;--card:#020617;--text:#fff;--muted:#9ca3af;--accent:#38bdf8;--border:#1e293b}
+html[data-theme="light"]{--bg:#fff;--card:#f1f5f9;--text:#020617;--muted:#475569;--accent:#2563eb;--border:#cbd5e1}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.6}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;width:100%;background:var(--card);border-bottom:1px solid var(--border);padding:10px 20px;display:flex;justify-content:space-between;align-items:center;z-index:999}
+.logo{display:flex;align-items:center;gap:12px;color:var(--text);text-decoration:none;font-weight:600;font-size:18px}
+.logo img{height:46px}
+.right{display:flex;gap:10px}
+.icon-btn{cursor:pointer;padding:6px 12px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:18px}
+.menu{position:relative}
+.menu-box{display:none;position:absolute;right:0;top:48px;background:var(--card);border:1px solid var(--border);border-radius:16px;min-width:180px}
+.menu-box a{display:block;padding:14px;color:var(--text);text-decoration:none}
+.menu-box a:hover{background:var(--accent);color:#fff}
+
+/* HERO */
+header{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px 40px}
+header h1{font-size:44px}
+header span{color:var(--accent)}
+header p{color:var(--muted);max-width:620px;margin:auto}
+.cta{margin-top:26px;display:inline-block;padding:14px 36px;border-radius:40px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+
+/* SECTIONS */
+section{max-width:1000px;margin:auto;padding:80px 20px}
+h2{text-align:center;margin-bottom:30px;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px;text-align:center}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;text-align:center}
+.stats div{font-size:32px;color:var(--accent)}
+.stats span{display:block;font-size:14px;color:var(--muted)}
+
+/* INSTAGRAM */
+.instagram{text-align:center;font-size:18px}
+.instagram a{color:var(--accent);text-decoration:none;font-weight:600}
+
+/* MINI CTA */
+.mini-cta{text-align:center;padding:60px 20px;background:linear-gradient(90deg,var(--accent),#60a5fa)}
+.mini-cta a{color:#fff;font-weight:600;text-decoration:none;font-size:18px}
+
+/* STICKY */
+.sticky{position:fixed;left:0;right:0;bottom:0;background:var(--accent);text-align:center;padding:14px;z-index:999}
+.sticky a{color:#fff;font-weight:600;text-decoration:none}
+
+/* FOOTER */
+footer{text-align:center;padding:60px 20px;background:var(--card);border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<div class="nav">
+ <a href="index.html" class="logo">
+  <img src="logo2.png">
+  <span>RicoTeknoloji</span>
+ </a>
+ <div class="right">
+  <div class="menu">
+   <div class="icon-btn" id="menuBtn">☰</div>
+   <div class="menu-box" id="menuBox">
+    <a href="referanslar.html">Referanslar</a>
+    <a href="fiyatlar.html">Fiyatlar</a>
+    <a href="https://wa.me/905365613022?text=Teklif+almak+istiyorum">Teklif Al</a>
+   </div>
+  </div>
+  <div class="icon-btn" id="modeToggle">🌙</div>
+ </div>
+</div>
+
+<header>
+ <div>
+  <h1>Rico<span>Teknoloji</span></h1>
+  <p>Az tasarım değil, doğru tasarım.</p>
+  <a class="cta" href="https://wa.me/905365613022?text=Teklif+almak+istiyorum">WhatsApp’tan Yaz</a>
+ </div>
+</header>
+
+<section>
+<h2>Neden Bizi Seçmelisiniz?</h2>
+<div class="grid">
+ <div class="card">🎯 Sosyal medya odaklı tasarım</div>
+ <div class="card">⚡ 24–48 saat hızlı teslim</div>
+ <div class="card">🔁 3 revize hakkı</div>
+ <div class="card">💬 WhatsApp’tan birebir iletişim</div>
+</div>
+</section>
+
+<section>
+<h2>Müşteri Yorumu</h2>
+<div class="card" style="max-width:700px;margin:auto;font-style:italic">
+ “Reels ve post tasarımları sayesinde sosyal medya etkileşimimiz ciddi şekilde arttı.”
+ <br><br><strong>— Ahmet K. / Kafe İşletmecisi</strong>
+</div>
+</section>
+
+<section>
+<h2>Bizi Instagram’dan Takip Et</h2>
+<div class="instagram">
+ 📸 <a href="https://instagram.com/reco.acn" target="_blank">@reco.acn</a>
+</div>
+</section>
+
+<section>
+<h2>Rakamlarla RicoTeknoloji</h2>
+<div class="stats">
+ <div>50+<span>Tasarım</span></div>
+ <div>20+<span>Mutlu Müşteri</span></div>
+ <div>%100<span>Memnuniyet</span></div>
+</div>
+</section>
+
+<div class="mini-cta">
+ <a href="https://wa.me/905365613022?text=Teklif+almak+istiyorum">Tasarım için hemen yaz →</a>
+</div>
+
+<footer>
+ <p>© 2026 RicoTeknoloji</p>
+</footer>
+
+<div class="sticky">
+ <a href="https://wa.me/905365613022?text=Teklif+almak+istiyorum">WhatsApp’tan Teklif Al</a>
+</div>
+
+<script>
+menuBtn.onclick=()=>menuBox.style.display=menuBox.style.display==="block"?"none":"block";
+document.addEventListener("click",e=>{
+ if(!menuBtn.contains(e.target)&&!menuBox.contains(e.target)) menuBox.style.display="none";
+});
+const root=document.documentElement;
+const saved=localStorage.getItem("theme");
+const prefersDark=window.matchMedia("(prefers-color-scheme: dark)").matches;
+root.setAttribute("data-theme", saved || (prefersDark?"dark":"light"));
+modeToggle.onclick=()=>{
+ const t=root.getAttribute("data-theme")==="dark"?"light":"dark";
+ root.setAttribute("data-theme",t);
+ localStorage.setItem("theme",t);
+}
+</script>
+
+</body>
+</html>
