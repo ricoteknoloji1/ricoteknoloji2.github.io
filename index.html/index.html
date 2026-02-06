@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RicoTeknoloji | Dijital Tasarım</title>
+
+<style>
+html[data-theme="dark"]{
+ --bg:#0b0f19;--card:#020617;--text:#ffffff;--muted:#9ca3af;
+ --accent:#38bdf8;--border:#1e293b;
+}
+html[data-theme="light"]{
+ --bg:#ffffff;--card:#f1f5f9;--text:#020617;--muted:#475569;
+ --accent:#2563eb;--border:#cbd5e1;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.6;transition:.3s}
+
+/* NAV */
+.nav{
+ position:fixed;top:0;left:0;width:100%;
+ background:var(--card);border-bottom:1px solid var(--border);
+ padding:12px 20px;display:flex;justify-content:space-between;align-items:center;z-index:999;
+}
+
+/* HERO */
+header{
+ min-height:80vh;display:flex;align-items:center;justify-content:center;
+ text-align:center;padding:120px 20px 40px;
+}
+header h1{font-size:44px;margin-bottom:12px}
+header span{color:var(--accent)}
+header p{max-width:620px;margin:auto;color:var(--muted);font-size:17px}
+.cta{
+ margin-top:26px;display:inline-block;padding:14px 36px;border-radius:40px;
+ background:var(--accent);color:#fff;text-decoration:none;font-weight:600;
+}
+
+/* SECTIONS */
+section{max-width:900px;margin:auto;padding:80px 20px}
+h2{text-align:center;margin-bottom:30px;color:var(--accent)}
+
+/* SERVICES */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
+.card{
+ background:var(--card);border:1px solid var(--border);border-radius:18px;
+ padding:26px;transition:.3s;opacity:0;transform:translateY(40px);
+}
+.card.show{opacity:1;transform:none}
+.card p{color:var(--muted)}
+
+/* LIST STYLE */
+.list{
+ max-width:400px;
+ margin:0 auto;
+ list-style:none;
+}
+.list li{
+ padding:10px 0;
+ font-size:17px;
+ color:var(--muted);
+ text-align:center;
+}
+.list li::before{
+ content:"• ";
+ color:var(--accent);
+}
+
+/* STICKY CTA */
+.sticky{
+ position:fixed;left:0;right:0;bottom:0;z-index:999;
+ background:var(--accent);text-align:center;padding:14px;
+}
+.sticky a{color:#fff;font-weight:600;text-decoration:none}
+
+/* FOOTER */
+footer{text-align:center;padding:60px 20px;background:var(--card);border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<div class="nav">
+ <strong>RicoTeknoloji</strong>
+</div>
+
+<header>
+ <div>
+  <h1>Rico<span>Teknoloji</span></h1>
+  <p>Az tasarım değil, doğru tasarım.</p>
+  <a class="cta" href="https://wa.me/905365613022?text=Teklif+almak+istiyorum">
+   WhatsApp’tan Yaz
+  </a>
+ </div>
+</header>
+
+<section>
+<h2>Hizmetler</h2>
+<div class="grid">
+ <div class="card">Logo Tasarımı</div>
+ <div class="card">Animasyonlu Logo</div>
+ <div class="card">Reels Tasarımı</div>
+ <div class="card">Post Tasarımı</div>
+</div>
+</section>
+
+<section>
+<h2>Kimler İçin Uygun?</h2>
+<ul class="list">
+ <li>Kafeler</li>
+ <li>Kuaförler</li>
+ <li>E-ticaret Markaları</li>
+ <li>Girişimciler</li>
+ <li>Küçük İşletmeler</li>
+</ul>
+</section>
+
+<section>
+<h2>Hakkımda</h2>
+<p style="text-align:center;color:var(--muted);max-width:700px;margin:auto">
+RicoTeknoloji, küçük işletmelerin dijitalde fark edilmesi için kuruldu.
+</p>
+</section>
+
+<footer>
+ <p>© 2026 RicoTeknoloji</p>
+</footer>
+
+<div class="sticky">
+ <a href="https://wa.me/905365613022?text=Teklif+almak+istiyorum">WhatsApp’tan Teklif Al</a>
+</div>
+
+<script>
+/* Scroll reveal */
+const cards=document.querySelectorAll(".card");
+const obs=new IntersectionObserver(e=>{
+ e.forEach(x=>x.isIntersecting&&x.target.classList.add("show"));
+},{threshold:.2});
+cards.forEach(c=>obs.observe(c));
+</script>
+
+</body>
+</html>
