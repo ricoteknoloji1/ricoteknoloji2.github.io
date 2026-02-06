@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RicoTeknoloji | Dijital Tasarım</title>
+
+<style>
+html[data-theme="dark"]{--bg:#0b0f19;--card:#020617;--text:#fff;--muted:#9ca3af;--accent:#38bdf8;--border:#1e293b}
+html[data-theme="light"]{--bg:#fff;--card:#f1f5f9;--text:#020617;--muted:#475569;--accent:#2563eb;--border:#cbd5e1}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.6}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;width:100%;background:rgba(2,6,23,.8);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:10px 20px;display:flex;justify-content:space-between;align-items:center;z-index:999}
+.logo img{height:46px}
+.right{display:flex;gap:10px}
+.icon-btn{cursor:pointer;padding:6px 12px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:18px}
+
+/* HERO */
+header{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 20px 40px}
+header h1{font-size:44px}
+header span{color:var(--accent)}
+header p{color:var(--muted);max-width:620px;margin:auto}
+.cta{margin-top:26px;display:inline-block;padding:14px 36px;border-radius:40px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;position:relative;overflow:hidden}
+.microcopy{margin-top:10px;font-size:13px;color:var(--muted)}
+
+/* SECTIONS */
+section{max-width:1000px;margin:auto;padding:80px 20px}
+h2{text-align:center;margin-bottom:30px;color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:26px;text-align:center}
+
+/* TRUST */
+.trust{text-align:center}
+.trust-number{font-size:52px;font-weight:700;color:var(--accent)}
+.glow{animation:glow 2.5s ease-in-out infinite}
+
+/* RATING */
+.rating{text-align:center}
+.stars{font-size:30px;color:#facc15;letter-spacing:6px}
+.stars span{display:inline-block;transition:.2s}
+
+/* INSTAGRAM */
+.instagram{display:flex;justify-content:center;align-items:center;gap:12px;font-size:18px}
+.instagram a{display:flex;align-items:center;gap:10px;color:var(--accent);text-decoration:none;font-weight:600}
+.instagram svg{width:26px;height:26px}
+
+/* MINI CTA */
+.mini-cta{text-align:center;padding:60px 20px;background:linear-gradient(90deg,var(--accent),#60a5fa)}
+.mini-cta a{color:#fff;font-weight:600;text-decoration:none;font-size:18px;position:relative;overflow:hidden}
+
+/* FOOTER */
+footer{text-align:center;padding:60px 20px;background:var(--card);border-top:1px solid var(--border)}
+
+/* ANIMATIONS */
+@keyframes glow{
+ 0%,100%{text-shadow:0 0 0 rgba(56,189,248,0)}
+ 50%{text-shadow:0 0 18px rgba(56,189,248,.55)}
+}
+.ripple{
+ position:absolute;border-radius:50%;transform:scale(0);
+ background:rgba(255,255,255,.6);
+ animation:ripple .6s linear;
+}
+@keyframes ripple{
+ to{transform:scale(4);opacity:0}
+}
+</style>
+</head>
+<body>
+
+<div class="nav">
+ <a href="index.html" class="logo"><img src="logo2.png"></a>
+ <div class="right">
+  <div class="icon-btn" id="modeToggle">🌙</div>
+ </div>
+</div>
+
+<header>
+ <div>
+  <h1>Rico<span>Teknoloji</span></h1>
+  <p>Az tasarım değil, doğru tasarım.</p>
+  <a class="cta ripple-btn" href="https://wa.me/905365613022?text=Teklif+almak+istiyorum">WhatsApp’tan Yaz</a>
+  <div class="microcopy">⏱ Ortalama dönüş süresi: 30 dk • Ücretsiz ön görüşme</div>
+ </div>
+</header>
+
+<section>
+<h2>Neden Bizi Seçmelisiniz?</h2>
+<div class="grid">
+ <div class="card">🎯 Sosyal medya odaklı tasarım</div>
+ <div class="card">⚡ 24–48 saat hızlı teslim</div>
+ <div class="card">🔁 3 revize hakkı</div>
+ <div class="card">💬 WhatsApp’tan birebir iletişim</div>
+</div>
+</section>
+
+<section class="trust">
+ <div class="trust-number glow" id="counter">0</div>
+ <div class="trust-text">Başarılı Tasarım & Mutlu Müşteri</div>
+</section>
+
+<section class="rating">
+ <div class="stars" id="stars">
+  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+ </div>
+ <div class="rating-text">5.0 Ortalama Puan • Gerçek Müşteri Değerlendirmeleri</div>
+</section>
+
+<section>
+<h2>Bizi Instagram’dan Takip Et</h2>
+<div class="instagram">
+ <a href="https://instagram.com/reco.acn" target="_blank">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+   <rect x="2" y="2" width="20" height="20" rx="5"/>
+   <circle cx="12" cy="12" r="4"/>
+   <circle cx="17.5" cy="6.5" r="1"/>
+  </svg>
+  @reco.acn
+ </a>
+</div>
+</section>
+
+<div class="mini-cta">
+ <a class="ripple-btn" href="https://wa.me/905365613022?text=Teklif+almak+istiyorum">Tasarım için hemen yaz →</a>
+</div>
+
+<footer>
+ <p>© 2026 RicoTeknoloji</p>
+</footer>
+
+<script>
+/* THEME */
+const root=document.documentElement;
+const saved=localStorage.getItem("theme");
+const prefersDark=window.matchMedia("(prefers-color-scheme: dark)").matches;
+root.setAttribute("data-theme", saved || (prefersDark?"dark":"light"));
+modeToggle.onclick=()=>{
+ const t=root.getAttribute("data-theme")==="dark"?"light":"dark";
+ root.setAttribute("data-theme",t);
+ localStorage.setItem("theme",t);
+};
+
+/* COUNTER */
+let started=false;
+const counter=document.getElementById("counter");
+const obs=new IntersectionObserver(e=>{
+ if(e[0].isIntersecting && !started){
+  started=true;let i=0;
+  const int=setInterval(()=>{
+   i++;counter.textContent="+"+i;
+   if(i>=120) clearInterval(int);
+  },15);
+ }
+});
+obs.observe(counter);
+
+/* STAR WAVE */
+const stars=document.querySelectorAll("#stars span");
+stars.forEach((s,i)=>{
+ s.addEventListener("mouseenter",()=>{
+  stars.forEach((x,j)=>{
+   setTimeout(()=>x.style.transform="scale(1.25)",Math.abs(i-j)*40);
+  });
+ });
+ s.addEventListener("mouseleave",()=>{
+  stars.forEach(x=>x.style.transform="scale(1)");
+ });
+});
+
+/* RIPPLE */
+document.querySelectorAll(".ripple-btn").forEach(btn=>{
+ btn.addEventListener("click",e=>{
+  const r=btn.getBoundingClientRect();
+  const d=document.createElement("span");
+  d.className="ripple";
+  d.style.left=e.clientX-r.left+"px";
+  d.style.top=e.clientY-r.top+"px";
+  btn.appendChild(d);
+  setTimeout(()=>d.remove(),600);
+ });
+});
+</script>
+
+</body>
+</html>
